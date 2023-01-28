@@ -1,5 +1,24 @@
 <?php
 	include("config.php");
+
+	/*if(isset($_POST['new'])){
+		$tablename = $_POST["tablename"];
+		$newtable = "create table ".$tablename."(product varchar(25),price int,unit int,date date)";
+		$res = mysqli_query($conn,$newtable);
+		if(!$res){
+			//header("Location: index.php");
+			echo "Error..!";
+		}
+	}*/
+
+	$tablename = $_GET["bill"];
+
+	//$newtable = "create table ".$tablename."(product varchar(25),price int,unit int,date date)";
+	//$res = mysqli_query($conn,$newtable);
+	//if(!$res){
+		//header("Location: index.php");
+	//	echo "Error..!";
+	//}
 ?>
 
 
@@ -44,9 +63,14 @@
 		<a href="index.php">
 				<button class="btn btn-info ml-auto">HOME</button>
 		</a>
-		<form class="insert-form" id="insert_form" method="post" action="">
+		<?php
+		//echo $tablename;
+		echo '<form class="insert-form" id="insert_form" method="post" action="insert.php?bill='.$tablename.'">';
+		//echo $tablename;
+			?>
 			<hr>
 			<div class="input-field">
+				<!--label><?php echo $tablename; ?></label-->
 				<table class="table table-bordered" id="table_field">
 					<tr>
 						<th>Product Name</th>
@@ -58,6 +82,7 @@
 
 					<?php
 						
+						/*
 						if(isset($_POST['save'])){
 
 							$product = $_POST['product'];
@@ -68,7 +93,7 @@
 							//Ivide demo database change aaki new table varanam..Ath bill number aavanam...
 
 							foreach ($product as $key => $value) {
-								$save = "insert into nuvatic123 values(
+								$save = "insert into ".$tablename." values(
 										'".$value."','".$price[$key]."','".$unit[$key]."','".$date[$key]."')";
 
 								$query = mysqli_query($conn,$save);
@@ -88,7 +113,7 @@
 
 							
 
-						}
+						}*/
 
 					?>
 
@@ -102,6 +127,7 @@
 					</tr>
 				</table>
 				<center>
+					<input type="hidden" name="tablename" value="<?php $tablename; ?>">
 					<th><input type="submit" class="btn btn-success text-white" name="save" id="save" value="Submit"></th>
 					<th><input type="reset" class="btn btn-dark text-white" name="reset" id="reset" value="Reset"></th>
 				</center>
