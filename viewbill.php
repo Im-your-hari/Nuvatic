@@ -51,9 +51,9 @@
 			
 		}
 
-		echo "<div class='container p-3'><br><hr><a href='invoice.php'><button class='btn btn-outline-danger'>Generate Invoice</button></a>&nbsp;";
-		echo "<a href='lpo.php'><button class='btn btn-outline-warning'>Generate LPO</button></a>&nbsp;";
-		echo "<a href='quote.php'><button class='btn btn-outline-success'>Generate Quotation</button></a>&nbsp;</div>";
+		echo "<div class='container p-3'><br><hr><a href='invoice.php'><button class='btn btn-outline-danger m-2'>Generate Invoice</button></a>&nbsp;";
+		echo "<a href='lpo.php'><button class='btn btn-outline-warning m-2'>Generate LPO</button></a>&nbsp;";
+		echo "<a href='quote.php'><button class='btn btn-outline-success m-2'>Generate Quotation</button></a>&nbsp;</div>";
 
 
 	}else{

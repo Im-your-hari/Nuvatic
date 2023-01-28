@@ -27,7 +27,8 @@
 		
 		<hr>
 	<center>
-		<table class="table table-striped">
+		<div class="col-lg-12 col-md-12">
+		<table class="container table table-striped">
 			<tr>
 				<th>INVOICE NAME</th>
 				<th>#</th>
@@ -68,7 +69,7 @@
 
 
 </table>
-		
+		</div>
 	</div>
 
 </center>
