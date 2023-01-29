@@ -7,8 +7,9 @@
 		$newtable = "create table ".$tablename."(product varchar(25),price int,unit int,date date)";
 		$res = mysqli_query($conn,$newtable);
 		if(!$res){
+			echo "<script>alert('Provide a valid Billname..!');</script>";
+			//sleep(2);
 			//header("Location: index.php");
-			echo "Error..!";
 		}
 		else{
 			header("location: billpage.php?bill=".$tablename."");
@@ -41,6 +42,10 @@
 	</div>
 
 	<div class="container ">
+
+		<div class="col-md-" id="alert-box">
+			
+		</div>
 
 		<div class="col-md-">
 			<form class="insert-form" method="post" action="">

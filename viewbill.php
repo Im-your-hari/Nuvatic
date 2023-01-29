@@ -23,10 +23,10 @@
 	<center>
 		<table class="table table-striped">
 			<tr>
-				<th>INVOICE NAME</th>
-				<th>#</th>
-				<th>#</th>
-				<th>#</th>
+				<th>PRODUCTS</th>
+				<th>PRICE</th>
+				<th>UNIT</th>
+				<th>DATE</th>
 			</tr>
 
 
