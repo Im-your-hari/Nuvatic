@@ -57,9 +57,9 @@
           //  echo $row['product']."<br>".$row['price']."<br>".$row["unit"];
         //}
         echo "<form action='' method='post'>";
-        echo "<input type='text' class='form-control' value='".$row['product']."' name='uproduct' placeholder='Product'><br>";
-        echo "<input type='text' class='form-control' value='".$row['price']."' name='uprice' placeholder='Price'><br>";
-        echo "<input type='text' class='form-control' value='".$row['unit']."' name='uunit' placeholder='Unit'><br>";
+        echo "<input type='text' class='form-control' value=".$row['product']." name='uproduct' placeholder='Product' required><br>";
+        echo "<input type='text' class='form-control' value=".$row['price']." name='uprice' placeholder='Price' required><br>";
+        echo "<input type='text' class='form-control' value=".$row['unit']." name='uunit' placeholder='Unit' required><br>";
         echo "<input type='submit' class='btn btn-warning text-white' name='UPDATE' value='UPDATE'></form>";
         
     }else{
@@ -69,15 +69,17 @@
     }
 
     if(isset($_POST['UPDATE'])){
-        echo "Update table";
+        //echo "Update table";
         $updt = "update $table set product='".$_POST['uproduct']."',price=".$_POST['uprice'].",unit=".$_POST['uunit']." where product='".$row['product']."'";
-        echo "<br>";
-        echo $updt;
+        //echo "<br>";
+        //echo $updt;
         $res = mysqli_query($conn,$updt);
         if($res){
             echo "<script>alert('Update Successfull..!');</script>";
+            header("location: admin.php?<script>alert('Update Successfull..!');</script>");
         }else{
             echo "<script>alert('Update Failed..Try again..!');</script>";
+            header("location: admin.php");
         }
 
     }
