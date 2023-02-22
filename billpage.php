@@ -78,6 +78,11 @@
 		//echo $tablename;
 			?>
 			<hr>
+			<div class="form-group">
+			    <label for="customerAddress" class=""><b>Customer Address</b></label>
+			    <textarea class="form-control" id="customerAddress" name="customerAddress" rows="3" required></textarea><br>
+			    <input type="text" class="form-control" name="customerPhone" placeholder="Customer Phone" required>
+			</div><hr>
 			<div class="input-field">
 				<!--label><?php echo $tablename; ?></label-->
 				<table class="table table-bordered" id="table_field">

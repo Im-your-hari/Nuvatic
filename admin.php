@@ -53,7 +53,7 @@
 					$result = mysqli_query($conn,$sql);
 					if ($result) {
 						while($row=mysqli_fetch_assoc($result)){
-							if($row['Tables_in_nuvatic']=='products' || $row['Tables_in_nuvatic']=='users'){
+							if($row['Tables_in_nuvatic']=='products' || $row['Tables_in_nuvatic']=='users' || $row['Tables_in_nuvatic']=='customeraddress'){
 								continue;
 							}else{
 								echo "<tr>";

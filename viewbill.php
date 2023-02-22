@@ -1,3 +1,25 @@
+<?php
+	include("config.php");
+	session_start();
+
+	//$_SESSION['nuatic_login']="true";
+	if($_SESSION['nuatic_login']!="true"){
+		header("Location: login.php");
+	}
+	else{
+		$bill_user = $_SESSION['nuatic_username'];
+	}
+
+	$tablename = $_GET['name'];
+
+	$sql = "select * from ".$tablename;
+	$result = mysqli_query($conn,$sql);
+	$custAddress = "select customerAddress,customerPhone from customeraddress where tablename='$tablename'";
+    $res = mysqli_query($conn,$custAddress);
+    $addrow=mysqli_fetch_assoc($res);
+    //echo $addrow['customerAddress'];
+
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +42,14 @@
 		</a>
 		
 		<hr>
-	<center>
+	
+		<?php
+			echo '<div class="form-group">
+    <label for="custadd"><b>Customer Address</b></label>
+    <textarea class="form-control table table-striped" rows="5" id="custadd" readonly>'.$addrow["customerAddress"].'</textarea>
+  </div>';
+		?>
+		<center>
 		<table class="table table-striped">
 			<tr>
 				<th>PRODUCTS</th>
@@ -31,21 +60,6 @@
 
 
 <?php
-	include("config.php");
-	session_start();
-
-	//$_SESSION['nuatic_login']="true";
-	if($_SESSION['nuatic_login']!="true"){
-		header("Location: login.php");
-	}
-	else{
-		$bill_user = $_SESSION['nuatic_username'];
-	}
-
-	$tablename = $_GET['name'];
-
-	$sql = "select * from ".$tablename;
-	$result = mysqli_query($conn,$sql);
 	if ($result) {
 		
 		while($row=mysqli_fetch_assoc($result)){

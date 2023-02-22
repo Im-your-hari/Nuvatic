@@ -19,6 +19,11 @@
 	$sql = "select * from ".$tablename;
 	$result = mysqli_query($conn,$sql);
 
+    $custAddress = "select customerAddress,customerPhone from customeraddress where tablename='$tablename'";
+    $res = mysqli_query($conn,$custAddress);
+    $addrow=mysqli_fetch_assoc($res);
+    //echo $addrow['customerAddress'];
+
     $content = '<html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -142,13 +147,13 @@
                     <div class="col-6">
                         <h2 class="heading">Invoice Name :'.$tablename.'</h2>
                         <p class="sub-heading">Order Date: 20-20-2021 </p>
-                        <p class="sub-heading">Email Address: customer@gfmail.com </p>
+                        
                     </div>
                     <div class="col-6">
-                        <p class="sub-heading"><b>Full Name :</b>  Customer name</p>
-                        <p class="sub-heading"><b>Address :</b>  Customer Address </p>
-                        <p class="sub-heading"><b>Phone Number :</b>  +91 8157096325</p>
-                        <p class="sub-heading"><b>City,State,Pincode :</b>  </p>
+                        <!--p class="sub-heading"><b>Full Name :</b>  Customer name</p-->
+                        <p class="sub-heading"><b>Address :</b>  '.$addrow["customerAddress"].' </p>
+                        <p class="sub-heading"><b>Phone Number :</b>  '.$addrow["customerPhone"].'</p>
+                        <!--p class="sub-heading"><b>City,State,Pincode :</b>  </p-->
                     </div>
                 </div>
             </div>
@@ -193,7 +198,7 @@
             </tr>
             <tr>
                 <td colspan="3" class="text-right">Grand Total</td>
-                <td> 12.XX</td>
+                <td> '.$total.'.XX</td>
             </tr>
         </tbody>
     </table>

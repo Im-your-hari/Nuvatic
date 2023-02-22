@@ -35,8 +35,20 @@
 							$price = $_POST['price'];
 							$unit = $_POST['unit'];
 							$date = $_POST['date'];
+							$customerAddress = $_POST['customerAddress'];
+							$customerPhone = $_POST['customerPhone'];
 
 							//Ivide demo database change aaki new table varanam..Ath bill number aavanam...
+
+
+							$addSave = "insert into customeraddress values('$tablename','$customerAddress','$customerPhone')";
+							//echo $addSave;
+							$addressQuery = mysqli_query($conn,$addSave);
+							if($addressQuery){
+								//echo "OK";
+							}else{
+								//echo "Not ok";
+							}
 
 							foreach ($product as $key => $value) {
 								$save = "insert into ".$tablename." values(
