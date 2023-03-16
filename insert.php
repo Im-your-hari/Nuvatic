@@ -34,14 +34,15 @@
 							$product = $_POST['product'];
 							$price = $_POST['price'];
 							$unit = $_POST['unit'];
-							$date = $_POST['date'];
+							//$date = $_POST['date'];
 							$customerAddress = $_POST['customerAddress'];
 							$customerPhone = $_POST['customerPhone'];
+							$deliveryNote = $_POST['deliveryNote'];
 
 							//Ivide demo database change aaki new table varanam..Ath bill number aavanam...
 
 
-							$addSave = "insert into customeraddress values('$tablename','$customerAddress','$customerPhone')";
+							$addSave = "insert into customeraddress values('$tablename','$customerAddress','$customerPhone','$deliveryNote')";
 							//echo $addSave;
 							$addressQuery = mysqli_query($conn,$addSave);
 							if($addressQuery){
@@ -52,7 +53,7 @@
 
 							foreach ($product as $key => $value) {
 								$save = "insert into ".$tablename." values(
-										'".$value."','".$price[$key]."','".$unit[$key]."','".$date[$key]."')";
+										'".$value."','".$price[$key]."','".$unit[$key]."','".date('d-m-Y')."')";
 
 								$query = mysqli_query($conn,$save);
 								if($query){

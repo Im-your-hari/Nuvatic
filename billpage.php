@@ -46,7 +46,7 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 
-		var html = '<tr><th><input type="text" class="form-control" name="product[]" required></th><th><input type="number" class="form-control" name="price[]" required></th><th><input type="number" class="form-control" name="unit[]" required></th><th><input type="date" class="form-control" name="date[]" required></th><th><input type="button" class="btn btn-danger text-white" name="remove" id="remove" value="REMOVE"></th></tr>';
+		var html = '<tr><th><input type="text" class="form-control" name="product[]" required></th><th><input type="number" class="form-control" name="price[]" required></th><th><input type="number" class="form-control" name="unit[]" required></th><!--th><input type="date" class="form-control" name="date[]" required></th--><th><input type="button" class="btn btn-danger text-white" name="remove" id="remove" value="REMOVE"></th></tr>';
 
 		var x = 1;
 
@@ -81,16 +81,17 @@
 			<div class="form-group">
 			    <label for="customerAddress" class=""><b>Customer Address</b></label>
 			    <textarea class="form-control" id="customerAddress" name="customerAddress" rows="3" required></textarea><br>
-			    <input type="text" class="form-control" name="customerPhone" placeholder="Customer Phone" required>
+			    <input type="text" class="form-control" name="customerPhone" placeholder="Customer Phone" required><br>
+				<input type="text" class="form-control" name="deliveryNote" placeholder="Delivery Note : 1001,1002..." required>
 			</div><hr>
 			<div class="input-field">
 				<!--label><?php echo $tablename; ?></label-->
 				<table class="table table-bordered" id="table_field">
 					<tr>
-						<th>Product Name</th>
-						<th>Price</th>
-						<th>Unit</th>
-						<th>Date</th>
+						<th>Description</th>
+						<th>Rate</th>
+						<th>Quantity</th>
+						<!--th>Date</th-->
 						<th>#</th>
 					</tr>
 
@@ -136,7 +137,7 @@
 						<th><input type="text" class="form-control" name="product[]" required></th>
 						<th><input type="number" class="form-control" name="price[]" required></th>
 						<th><input type="number" class="form-control" name="unit[]" required></th>
-						<th><input type="date" class="form-control" name="date[]" required></th>
+						<!--th><input type="date" class="form-control" name="date[]" required></th-->
 						<th><input type="button" class="btn btn-warning text-white" name="add" id="addButton" value="ADD"></th>
 					</tr>
 				</table>

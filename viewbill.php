@@ -14,7 +14,7 @@
 
 	$sql = "select * from ".$tablename;
 	$result = mysqli_query($conn,$sql);
-	$custAddress = "select customerAddress,customerPhone from customeraddress where tablename='$tablename'";
+	$custAddress = "select customerAddress,customerPhone,deliveryNote from customeraddress where tablename='$tablename'";
     $res = mysqli_query($conn,$custAddress);
     $addrow=mysqli_fetch_assoc($res);
     //echo $addrow['customerAddress'];
@@ -48,6 +48,11 @@
     <label for="custadd"><b>Customer Address</b></label>
     <textarea class="form-control table table-striped" rows="5" id="custadd" readonly>'.$addrow["customerAddress"].'</textarea>
   </div>';
+  echo '<div class="form-group">
+  <label for="deliveryNote"><b>Delivery Note</b></label>
+  <input type="text" class="form-control table table-striped" id="deliveryNote" value="'.$addrow["deliveryNote"].'" readonly>
+</div>';
+
 		?>
 		<center>
 		<table class="table table-striped">
@@ -55,7 +60,7 @@
 				<th>PRODUCTS</th>
 				<th>PRICE</th>
 				<th>UNIT</th>
-				<th>DATE</th>
+				<!--th>DATE</th-->
 			</tr>
 
 
@@ -68,13 +73,13 @@
 			echo "<td>".$row['product']."<br></td>";
 			echo "<td>".$row['price']."<br></td>";
 			echo "<td>".$row['unit']."<br></td>";
-			echo "<td>".$row['date']."<br></td>";
+			//echo "<td>".$row['date']."<br></td>";
 			
 			echo "</tr>";
 			
 		}
 
-		echo "<div class='container p-3'><br><hr><a href='invoice.php?name=$tablename'><button class='btn btn-outline-danger m-2'>Generate Invoice</button></a>&nbsp;";
+		echo "<div class='container p-3'><br><hr><a href='invo.php?name=$tablename'><button class='btn btn-outline-danger m-2'>Generate Invoice</button></a>&nbsp;";
 		echo "<a href='lpo.php?name=$tablename'><button class='btn btn-outline-warning m-2'>Generate LPO</button></a>&nbsp;";
 		echo "<a href='quote.php?name=$tablename'><button class='btn btn-outline-success m-2'>Generate Quotation</button></a>&nbsp;</div>";
 
