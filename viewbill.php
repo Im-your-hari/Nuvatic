@@ -60,7 +60,7 @@
 				<th>PRODUCTS</th>
 				<th>PRICE</th>
 				<th>UNIT</th>
-				<!--th>DATE</th-->
+				<th>AVAILABILITY</th-->
 			</tr>
 
 
@@ -73,6 +73,7 @@
 			echo "<td>".$row['product']."<br></td>";
 			echo "<td>".$row['price']."<br></td>";
 			echo "<td>".$row['unit']."<br></td>";
+			echo "<td>".$row['available']."<br></td>";
 			//echo "<td>".$row['date']."<br></td>";
 			
 			echo "</tr>";

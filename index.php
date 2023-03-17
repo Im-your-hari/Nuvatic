@@ -14,7 +14,7 @@
 	if(isset($_POST['new'])){
 		$tablename = $_POST["tablename"];
 
-		$newtable = "create table ".$tablename."(product varchar(25),price int,unit int,date date)";
+		$newtable = "create table ".$tablename."(product varchar(25),price int,unit int,date date,available varchar(25))";
 		$res = mysqli_query($conn,$newtable);
 		if(!$res){
 			echo "<script>alert('Provide a valid Billname..!');</script>";

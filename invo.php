@@ -204,7 +204,7 @@
                         <th>per</th>
                         <th>VAT<br>%</th>
                         <th>Amount</th>
-                        <th>Taxable<br>Vlaue(AED)</th>
+                        <th>Taxable<br>Value(AED)</th>
                         <th>VAT<br>(AED)</th>
                     </tr>'
                     ;
@@ -248,25 +248,25 @@
                                     <br>VAT Amount (in words)<br>
                                     <b>'.getCurrency($vat).'</b>
                                 <div style="width: 50px;"></div>
-                                <p><u>Declaration</u></p>
+                                <p><u><h3>Declaration</h3></u></p>
                                 <div style="width: 400px;">We declare that this invoice shows the actual price of
-                                    the<br> goods described and that all particulars are true and correct</div>
+                                    the goods described and that all particulars are true and correct</div>
                                 </p>
                             </div>
                             <div style="float: right;" style=" width: 100%;">
                                 <div class="grid-container"
-                                    style="margin-top: -2px; margin-right: -2px; width: 300px; border: 1px solid black;">
-                                    <div>Taxable Value</div>
-                                    <div>'.$total.'</div>
-                                    <div>Value Added Tax 5%</div>
-                                    <div>'.$vat.'</div>
-                                    <div style="border-top: 1px solid; border-bottom: 1px solid;"><b>Invoice Total</b>
+                                    style=" width: 300px;">
+                                    <div>Taxable Value : '.$total.'</div>
+                                    <!--div></div-->
+                                    <div>Value Added Tax 5% : '.$vat.'</div>
+                                    <!--div></div-->
+                                    <div style=""><h2><b>Invoice Total : '.($total+$vat).'</h2></b>
                                     </div>
-                                    <div style="border-top: 1px solid; border-bottom: 1px solid;"><b>'.($total+$vat).'</b></div>
+                                    <!--div style="border-bottom: 1px solid;"><b></b></div-->
 
 
                                 </div>
-                                <div style="float: right;">E. & O.E</div>
+                                <div style="float: right;"><h5>E. & O.E</h5></div>
                             </div>
 
                         </td>
@@ -278,7 +278,7 @@
                         <td colspan="4">
                             <div>
                                 <div>
-                                    <p style="float: right; margin-top: -1px;">for Nuvatic Electrical Equipment Trading
+                                    <p style="float: right; margin-top: -1px;">For Nuvatic Electrical Equipment Trading
                                     </p>
                                 </div>
                                 <div>

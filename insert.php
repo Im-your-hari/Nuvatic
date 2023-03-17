@@ -34,6 +34,8 @@
 							$product = $_POST['product'];
 							$price = $_POST['price'];
 							$unit = $_POST['unit'];
+							$avail = $_POST['avail'];
+							//echo $avail;
 							//$date = $_POST['date'];
 							$customerAddress = $_POST['customerAddress'];
 							$customerPhone = $_POST['customerPhone'];
@@ -52,8 +54,9 @@
 							}
 
 							foreach ($product as $key => $value) {
+								echo $avail[$key];
 								$save = "insert into ".$tablename." values(
-										'".$value."','".$price[$key]."','".$unit[$key]."','".date('d-m-Y')."')";
+										'".$value."','".$price[$key]."','".$unit[$key]."','".date('d-m-Y')."','".$avail[$key]."')";
 
 								$query = mysqli_query($conn,$save);
 								if($query){
@@ -66,7 +69,7 @@
 								else{
 									echo "<div class='alert alert-danger' role='alert'>Error while adding items..Try again..!</div>";
 									sleep(2);
-									header("Location: billpage.php?bill=".$tablename."");
+									//header("Location: billpage.php?bill=".$tablename."");
 								}
 							}
 

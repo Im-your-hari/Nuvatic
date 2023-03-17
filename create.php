@@ -13,7 +13,7 @@
 
 	$tablename = $_POST["tablename"];
 
-	$newtable = "create table ".$tablename."(product varchar(25),price int,unit int,date date)";
+	$newtable = "create table ".$tablename."(product varchar(25),price int,unit int,date date,available varchar(25))";
 	$res = mysqli_query($conn,$newtable);
 	if(!$res){
 		//header("Location: index.php");

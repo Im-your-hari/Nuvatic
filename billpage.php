@@ -46,7 +46,7 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 
-		var html = '<tr><th><input type="text" class="form-control" name="product[]" required></th><th><input type="number" class="form-control" name="price[]" required></th><th><input type="number" class="form-control" name="unit[]" required></th><!--th><input type="date" class="form-control" name="date[]" required></th--><th><input type="button" class="btn btn-danger text-white" name="remove" id="remove" value="REMOVE"></th></tr>';
+		var html = '<tr><th><input type="text" class="form-control" name="product[]" required></th><th><input type="number" class="form-control" name="price[]" required></th><th><input type="number" class="form-control" name="unit[]" required></th><th><input type="text" class="form-control" name="avail[]" placeholder="EX STOCK" required></th><th><input type="button" class="btn btn-danger text-white" name="remove" id="remove" value="REMOVE"></th></tr>';
 
 		var x = 1;
 
@@ -91,7 +91,7 @@
 						<th>Description</th>
 						<th>Rate</th>
 						<th>Quantity</th>
-						<!--th>Date</th-->
+						<th>Availability</th>
 						<th>#</th>
 					</tr>
 
@@ -137,7 +137,7 @@
 						<th><input type="text" class="form-control" name="product[]" required></th>
 						<th><input type="number" class="form-control" name="price[]" required></th>
 						<th><input type="number" class="form-control" name="unit[]" required></th>
-						<!--th><input type="date" class="form-control" name="date[]" required></th-->
+						<th><input type="text" class="form-control" name="avail[]" placeholder="EX STOCK" required></th-->
 						<th><input type="button" class="btn btn-warning text-white" name="add" id="addButton" value="ADD"></th>
 					</tr>
 				</table>
