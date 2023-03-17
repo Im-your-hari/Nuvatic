@@ -79,6 +79,11 @@ $content = '<!DOCTYPE html>
 
     .head1 {
         float: center;
+        justify-content : center;
+        align-items : center;
+        font-family:Cambria, Cochin, Georgia, Times, '.'Times New Roman'.', serif;
+        font-size : 14px;
+        
     }
 
     .head2 {
@@ -110,13 +115,13 @@ $content = '<!DOCTYPE html>
     .brdr2 {
         border: 2px solid black;
         text-align: center;
-        padding: 30px;
+        padding: 15px;
     }
 
     .brdr3 {
         border: 2px solid black;
         text-align: center;
-        padding: 20px;
+        padding: 15px;
     }
 
 </style>
@@ -129,14 +134,14 @@ $content = '<!DOCTYPE html>
 
                 
                 <div class="head1">
-                <img src="logo.PNG" width="80px" height="80px"
-                style="float:center;justify-content:center;"><h1>NUVATIC ELECTRICAL EQUIPMENT TRADING</h1>
+                <!--img src="logo.PNG" width="80px" height="80px"
+                style="float:center;justify-content:center;"--><h1>NUVATIC ELECTRICAL EQUIPMENT TRADING</h1>
                         <!--div class="center" style="padding: 100px; width: auto;">
                                         
                                     </div-->
                     </div>
                     <div class="head2" style="margin-left:430px;">
-                        <h2>PURCHASE ORDER</h2>
+                        <h2>LOCAL PURCHASE ORDER</h2>
                     </div>
                 </div>
                 <div class="">
@@ -149,7 +154,7 @@ $content = '<!DOCTYPE html>
                                             <hr>
                                         <div class="t1">
                                             <table cellspacing="0" cellpadding="0" style="width: 100%; border: none;">
-                                                <tr>
+                                                <!--tr>
                                                     <td style="width:25%">ATTN: Name :</td>
                                                     <td style="width:75%">DINESH</td>
                                                 </tr>
@@ -160,19 +165,19 @@ $content = '<!DOCTYPE html>
                                                 <tr>
                                                     <td></td>
                                                     <td>ABU DHABI</td>
+                                                </tr-->
+                                                <tr>
+                                                    <td>'.$addrow["customerAddress"].'</td>
+                                                    <!--td>UAE</td-->
                                                 </tr>
                                                 <tr>
+                                                    <td>Contact number : '.$addrow["customerPhone"].'</td>
+                                                    <!--td>559456995</td-->
+                                                </tr>
+                                                <!--tr>
+                                                    <td>Email :</td>
                                                     <td></td>
-                                                    <td>UAE</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Contact number :</td>
-                                                    <td>559456995</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Email Address :</td>
-                                                    <td></td>
-                                                </tr>
+                                                </tr-->
                                             </table>
                                         </div>
                                 </td>
@@ -180,8 +185,8 @@ $content = '<!DOCTYPE html>
                                     <table class="kk"
                                         style=" border: 1px solid ;border-collapse: collapse; width: 70%; float: right;">
                                         <tr>
-                                            <td class="brdr">DATE :</td>
-                                            <td class="brdr">26-12-2022</td>
+                                            <td class="brdr">DATE </td>
+                                            <td class="brdr">'.date("d-m-Y").'</td>
                                         </tr>
                                         <tr>
                                             <td class="brdr">PAYMENT TERMS</td>
@@ -189,7 +194,7 @@ $content = '<!DOCTYPE html>
                                         </tr>
                                         <tr>
                                             <td class="brdr">PO NUMBER</td>
-                                            <td class="brdr">P.O. NO. 4255 DEC 22</td>
+                                            <td class="brdr"></td>
                                         </tr>
                                     </table>
                                 </td>
@@ -201,40 +206,40 @@ $content = '<!DOCTYPE html>
                             <div class="t2">
                                 <table style="width: 100%;">
                                     <tr>
-                                        <td style="width:25%">ATTN: Name : ABHILASH SOMAN </td>
+                                        <td style="width:100%">ATTN: Name : ABHILASH SOMAN </td>
                                         <!--td style="width:75%">ABHILASH SOMAN </td-->
                                     </tr>
                                     <tr>
-                                        <td>Company Name :</td>
-                                        <td>NUVATIC ELECTRICAL EQUIPMENT TRADING </td>
+                                        <td>Company Name : NUVATIC ELECTRICAL EQUIPMENT TRADING </td>
+                                        <!--td>NUVATIC ELECTRICAL EQUIPMENT TRADING </td-->
                                     </tr>
                                     <tr>
-                                        <td></td>
                                         <td>MUSSAFAH 44</td>
-                                    </tr>
-                                    <tr>
                                         <td></td>
+                                    </tr>
+                                    <tr>
                                         <td>ABU DHABI</td>
+                                        <td></td>
                                     </tr>
                                     <tr>
-                                        <td>PH :</td>
-                                        <td>02 6773688</td>
+                                        <td>PH : 02 6773688</td>
+                                        <!--td>02 6773688</td-->
                                     </tr>
                                     <tr>
-                                        <td>Email Address :</td>
-                                        <td><a>nuvatic@emirates.net.ae</a></td>
+                                        <td>Email : <a>nuvatic@emirates.net.ae</a></td>
+                                        <!--td><a>nuvatic@emirates.net.ae</a></td-->
                                     </tr>
                                     <tr>
-                                        <td>TRN NO :</td>
-                                        <td>100541904700003</td>
+                                        <td>TRN NO : 10054190470000</td>
+                                        <!--td>100541904700003</td-->
                                     </tr>
                                 </table>
                             </div>
                                 </td>
                                 <td>
                                     <div class="center" style="padding: 100px; width: auto;">
-                                        <!--img src="logo.PNG" width="80px" height="80px"
-                                            style="margin-top: -70px; margin-left: 70px;"-->
+                                        <img src="logo.PNG" width="80px" height="80px"
+                                            style="margin-top: -70px; margin-left: 70px;">
                                     </div>
                                 </td>
                             </tr>
@@ -249,25 +254,37 @@ $content = '<!DOCTYPE html>
                                 <th class="bluehead brdr">UNIT</th>
                                 <th class="bluehead brdr">UNIT PRICE</th>
                                 <th class="bluehead brdr">TOTAL</th>
-                            </tr>
+                            </tr>'
+                            ;
+                            $i=1;
+                            while($row=mysqli_fetch_assoc($result)){
+                            
+                                $content.='
                             <tr>
-                                <td class="brdr2">1</td>
-                                <td class="brdr2">REMOTE CONTROL PARKING LOCK</td>
-                                <td class="brdr2">2</td>
+                                <td class="brdr2">'.$i.'</td>
+                                <td class="brdr2">'.$row['product'].'</td>
+                                <td class="brdr2">'.$row['unit'].'</td>
                                 <td class="brdr2">NOS</td>
                                 <td class="brdr2">
                                     <div>
                                         <p class="head1">AED</p>
-                                        <p class="head2">285.00</p>
+                                        <p class="head2">'.$row['price'].'</p>
                                     </div>
                                 </td>
                                 <td class="brdr2">
                                     <div>
                                         <p class="head1">AED</p>
-                                        <p class="head2">570.00</p>
+                                        <p class="head2">'.($row['price']*$row['unit']).'</p>
                                     </div>
                                 </td>
-                            </tr>
+                            </tr>';
+                            $total +=($row['price']*$row['unit']);
+                            $vat += (($row['price']*$row['unit'])/100);
+                            $i+=1;
+                            }
+                            $i=1;
+                            
+                            $content.='
                             <tr>
                                 <td></td>
                                 <td></td>
@@ -277,7 +294,7 @@ $content = '<!DOCTYPE html>
                                 <td class="brdr">
                                     <div>
                                         <p class="head1">AED</p>
-                                        <p class="head2">570.00</p>
+                                        <p class="head2">'.$total.'</p>
                                     </div>
                                 </td>
                             </tr>
@@ -290,7 +307,7 @@ $content = '<!DOCTYPE html>
                                 <td class="brdr">
                                     <div>
                                         <p class="head1">AED</p>
-                                        <p class="head2">28.50</p>
+                                        <p class="head2">'.$vat.'</p>
                                     </div>
                                 </td>
                             </tr>
@@ -303,7 +320,7 @@ $content = '<!DOCTYPE html>
                                 <td class="brdr">
                                     <div>
                                         <p class="head1">AED</p>
-                                        <p class="head2">598.00</p>
+                                        <p class="head2">'.($total+$vat).'</p>
                                     </div>
                                 </td>
                             </tr>
@@ -346,7 +363,7 @@ $content = '<!DOCTYPE html>
                             <tr>
                                 <td class="brdr3"></td>
                                 <td class="brdr3"></td>
-                                <td class="brdr3">12-26-2022</td>
+                                <td class="brdr3">'.date('d-m-Y').'</td>
                             </tr>
                         </table>
                     </div>
